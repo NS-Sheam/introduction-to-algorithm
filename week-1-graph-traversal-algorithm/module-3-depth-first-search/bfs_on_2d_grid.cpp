@@ -2,6 +2,7 @@
 using namespace std;
 char grid[105][1005];
 bool vis[105][105];
+int lavel[105][105];
 
 vector<pair<int, int>> d = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 int n, m;
@@ -17,6 +18,7 @@ void bfs(int si, int sj)
     queue<pair<int, int>> q;
     q.push({si, sj});
     vis[si][sj] = true;
+    lavel[si][sj] = 0;
     while (!q.empty())
     {
 
@@ -25,16 +27,17 @@ void bfs(int si, int sj)
 
         int par_i = par.first;
         int par_j = par.second;
-        cout << par_i << " " << par_j << endl;
+        // cout << par_i << " " << par_j << endl;
         for (int i = 0; i < 4; i++)
         {
 
             int ci = par_i + d[i].first;
             int cj = par_j + d[i].second;
-            if (valid(ci, cj) && !vis[ci][cj])
+            if (valid(ci, cj) && !vis[ci][cj] && grid[ci][cj] == '.')
             {
                 q.push({ci, cj});
                 vis[ci][cj] = true;
+                lavel[ci][cj] = lavel[par_i][par_j] + 1;
             }
         }
     }
@@ -60,10 +63,13 @@ int main()
     //     cout << endl;
     // }
 
-    int si, sj;
-    cin >> si >> sj;
+    int si, sj, di, dj;
+    cin >> si >> sj >> di >> dj;
     memset(vis, false, sizeof(vis));
+    memset(lavel, -1, sizeof(lavel));
     bfs(si, sj);
+    cout << di << " " << dj << endl;
+    cout << lavel[di][dj] << " distance " << endl;
 
     return 0;
 }
