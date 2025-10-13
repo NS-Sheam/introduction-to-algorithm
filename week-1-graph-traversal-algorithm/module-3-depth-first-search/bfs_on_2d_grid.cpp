@@ -1,29 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
-char grid[105][105];
+char grid[105][1005];
+bool vis[105][105];
 
-int vis[1005][1005];
 vector<pair<int, int>> d = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 int n, m;
-
 bool valid(int i, int j)
 {
     if (i < 0 || i >= n || j < 0 || j >= m)
         return false;
-
     return true;
 }
 
-void dfs(int si, int sj)
+void bfs(int si, int sj)
 {
-    cout << si << " " << sj << endl;
+    queue<pair<int, int>> q;
+    q.push({si, sj});
     vis[si][sj] = true;
-    for (int i = 0; i < 4; i++)
+    while (!q.empty())
     {
-        int ci = si - d[i].first;
-        int cj = sj + d[i].second;
-        if (valid(ci, cj) && !vis[ci][cj])
-            dfs(ci, cj);
+
+        pair<int, int> par = q.front();
+        q.pop();
+
+        int par_i = par.first;
+        int par_j = par.second;
+        cout << par_i << " " << par_j << endl;
+        for (int i = 0; i < 4; i++)
+        {
+
+            int ci = par_i + d[i].first;
+            int cj = par_j + d[i].second;
+            if (valid(ci, cj) && !vis[ci][cj])
+            {
+                q.push({ci, cj});
+                vis[ci][cj] = true;
+            }
+        }
     }
 }
 
@@ -42,7 +55,7 @@ int main()
     // {
     //     for (int j = 0; j < m; j++)
     //     {
-    //         cout << grid[i][j];
+    //         cout << grid[i][j] << " ";
     //     }
     //     cout << endl;
     // }
@@ -50,7 +63,7 @@ int main()
     int si, sj;
     cin >> si >> sj;
     memset(vis, false, sizeof(vis));
-    dfs(si, sj);
+    bfs(si, sj);
 
     return 0;
 }
