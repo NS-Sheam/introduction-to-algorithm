@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-char grid[105][105];
+vector<vector<char>> grid(1005, vector<char>(1005));
 
 int vis[1005][1005];
 vector<pair<int, int>> d = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
@@ -38,6 +38,8 @@ int main()
             cin >> grid[i][j];
         }
     }
+
+    cout << " size " << grid.size() << grid[0].size() << endl;
     // for (int i = 0; i < n; i++)
     // {
     //     for (int j = 0; j < m; j++)

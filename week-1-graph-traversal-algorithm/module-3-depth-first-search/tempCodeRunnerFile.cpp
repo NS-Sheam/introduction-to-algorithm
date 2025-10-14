@@ -1,1 +1,1 @@
-cout << si << " " << sj << endl;
+grid[105][105];
