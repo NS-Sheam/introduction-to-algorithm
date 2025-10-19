@@ -1,7 +1,7 @@
-0
-1
-2
-3
-4
-5
-NO CYCLE
+0 parent-> -1
+1 parent-> 0
+2 parent-> 1
+3 parent-> 2
+4 parent-> -1
+5 parent-> -1
+DETECTED
