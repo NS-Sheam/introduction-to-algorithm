@@ -1,1 +1,2 @@
-cycle
+
+                bool isTouch = false;
