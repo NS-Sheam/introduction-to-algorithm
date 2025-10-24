@@ -1,8 +1,1 @@
- evenSize =-> 0 oddSize-> 1 i-> 0
- evenSize =-> 1 oddSize-> 1 i-> 1
- evenSize =-> 1 oddSize-> 2 i-> 2
- evenSize =-> 1 oddSize-> 2 i-> 3
-2
-2 -> 2
-1 -> 1
-3 -> 1
+3

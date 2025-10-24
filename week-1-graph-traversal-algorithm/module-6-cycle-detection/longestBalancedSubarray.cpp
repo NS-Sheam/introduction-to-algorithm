@@ -14,19 +14,23 @@ int main()
     //     cout << nums[i] << " ";
     // }
 
-    map<int, int> evenMap;
-    map<int, int> oddMap;
     int mxL = 0;
     for (int i = 0; i < n; i++)
     {
-        if (nums[i] % 2 == 0)
-            evenMap[nums[i]]++;
-        else
-            oddMap[nums[i]]++;
-        cout << " evenSize =-> " << evenMap.size() << " oddSize-> " << oddMap.size() << " i-> " << i << endl;
-        if (evenMap.size() == oddMap.size())
+        set<int> evenSet;
+        set<int> oddSet;
+
+        for (int j = i; j < n; j++)
         {
-            mxL = max(mxL, i + 1);
+            if (nums[j] % 2 == 0)
+                evenSet.insert(nums[j]);
+            else
+                oddSet.insert(nums[j]);
+
+            if (evenSet.size() == oddSet.size())
+            {
+                mxL = max(mxL, j - i + 1);
+            }
         }
     }
 
