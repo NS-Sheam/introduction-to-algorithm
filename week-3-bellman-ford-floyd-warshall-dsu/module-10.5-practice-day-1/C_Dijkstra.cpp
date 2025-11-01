@@ -10,7 +10,7 @@ class cmp
 public:
     bool operator()(pair<long long int, long long int> a, pair<long long int, long long int> b)
     {
-        return a.second > b.second; // smallest distance comes first
+        return a.second > b.second;
     }
 };
 
@@ -26,7 +26,7 @@ void dijkstra(long long int src, long long int n)
         pq.pop();
 
         if (par_dist > dis[par_node])
-            continue; // skip outdated entry
+            continue;
 
         for (auto [child_node, child_dist] : adj_list[par_node])
         {
