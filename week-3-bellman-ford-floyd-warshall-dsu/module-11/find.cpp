@@ -16,7 +16,7 @@ int main()
 {
     memset(par, -1, sizeof(par));
     par[0] = 1;
-    par[1] = -1;
+    // par[1] is already initialized to -1 by memset, so this line is redundant and removed.
     par[2] = 1;
     par[3] = 1;
     par[4] = 5;
