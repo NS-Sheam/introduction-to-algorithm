@@ -51,7 +51,7 @@ int main()
     }
     cout << endl;
 
-    reverse(nodes.begin(), nodes.end());
+    sort(nodes.begin(), nodes.end());
     cout << "Component -> " << endl;
     for (int node : nodes)
     {

@@ -1,0 +1,100 @@
+{
+  "Add-Food-Page": {
+    "req-1": {
+      "description": "Must be a Private Route, accessible only to logged-in users.",
+      "number": "1",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-2": {
+      "description": "Form Fields: Food Name, Food Image (imgbb), Food Quantity, Pickup Location, Expire Date, Additional Notes.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-3": {
+      "description": "Auto-filled Data: Donator's Info (Name, Email, Image) must be automatically added from the logged-in Firebase user.",
+      "number": "1",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-4": {
+      "description": "Default Status: The 'food_status' must be set to 'Available' by default on creation.",
+      "number": "1",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-5": {
+      "description": "On submission, save data to MongoDB 'foods' collection and show a success toast.",
+      "number": "1",
+      "correct": true,
+      "message": "not okay"
+    }
+  },
+  "Available-Foods-Page": {
+    "req-1": {
+      "description": "Fetch and display all food items where 'food_status' is 'Available'.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-2": {
+      "description": "Card Layout: Display foods in a grid. Each card must show: Food Image, Name, Donator Name & Image, Quantity, Location, Expire Date.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-3": {
+      "description": "'View Details' button must redirect non-logged-in users to the Login page.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    }
+  },
+  "Food-Details-Page": {
+    "req-1": {
+      "description": "Must be a Private, dynamic route (e.g., /food/:id).",
+      "number": "1",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-2": {
+      "description": "Display all details for the selected item, including Donator Info and Additional Notes.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-3": {
+      "description": "A 'Request Food' button must be present on this page.",
+      "number": "1",
+      "correct": true,
+      "message": "not okay"
+    }
+  },
+  "Manage-My-Foods-(Update/Delete)-Page": {
+    "req-1": {
+      "description": "Private Route: Must show *only* the foods added by the currently logged-in user.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-2": {
+      "description": "Update Functionality: An 'Update' button must be present for each item (opening a Modal or new Page).",
+      "number": "1",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-3": {
+      "description": "Pre-filled Form: The Update form must be pre-filled with the existing data for that food item.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    },
+    "req-4": {
+      "description": "Delete Functionality: A 'Delete' button must be present, showing a confirmation prompt (e.g., SweetAlert) before deletion.",
+      "number": "2",
+      "correct": true,
+      "message": "not okay"
+    }
+  }
+}

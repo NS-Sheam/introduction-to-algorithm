@@ -60,9 +60,7 @@ int main()
         {
             if (grid[i][j] == 'O' && !vis[i][j])
                 grid[i][j] = 'X';
-            cout << grid[i][j] << " ";
         }
-        cout << endl;
     }
 
     return 0;

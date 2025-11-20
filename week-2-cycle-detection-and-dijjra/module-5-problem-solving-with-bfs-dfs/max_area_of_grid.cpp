@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector<vector<int>> grid(1005, vector<int>(1005));
-// vector<vector<bool>> vis(1005, vector<bool>(1005, false));
 vector<vector<bool>> vis(1005, vector<bool>(1005, false));
 
 vector<pair<int, int>> dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};

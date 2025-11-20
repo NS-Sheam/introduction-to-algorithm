@@ -3,6 +3,7 @@
     "*.dbclient-js": "javascript",
     "vector": "cpp",
     "iostream": "cpp",
-    "__node_handle": "cpp"
+    "__node_handle": "cpp",
+    "queue": "cpp"
   }
 }
